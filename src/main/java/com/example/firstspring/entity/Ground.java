@@ -1,9 +1,13 @@
 package com.example.firstspring.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Ground")
+@Setter
+@Getter
 public class Ground{
     @Id
     @Column(name = "ground_id")

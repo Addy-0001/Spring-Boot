@@ -12,5 +12,4 @@ import lombok.Setter;
 public class FutsalPojo {
     private Integer id;
     private String groundName;
-    private String groundImage;
 }
