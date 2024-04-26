@@ -7,6 +7,8 @@ import com.example.firstspring.service.FutsalService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @RequiredArgsConstructor
@@ -15,10 +17,17 @@ public class FutsalServiceImpl implements FutsalService {
     private final GroundRepository groundRepository;
 
     @Override
+    public List<Ground> findAll() {
+        return groundRepository.findAll();
+    }
+
+    @Override
     public void save(FutsalPojo futsalPojo) {
         Ground ground = new Ground();
         ground.setId(futsalPojo.getId());
         ground.setGround(futsalPojo.getGroundName());
         groundRepository.save(ground);
     }
+
+
 }
