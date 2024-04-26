@@ -10,4 +10,6 @@ public interface FutsalService {
     void save(FutsalPojo futsalPojo);
 
     public List<Ground> findAll();
+
+    public void deleteByID(Integer id);
 }

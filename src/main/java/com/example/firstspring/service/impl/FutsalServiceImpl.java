@@ -22,6 +22,11 @@ public class FutsalServiceImpl implements FutsalService {
     }
 
     @Override
+    public void deleteByID(Integer id) {
+        groundRepository.deleteById(id);
+    }
+
+    @Override
     public void save(FutsalPojo futsalPojo) {
         Ground ground = new Ground();
         ground.setId(futsalPojo.getId());

@@ -24,4 +24,9 @@ public class FutsalController {
     public void save(@RequestBody FutsalPojo futsalPojo) {
         this.futsalService.save(futsalPojo);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable Integer id){
+        this.futsalService.deleteByID(id);
+    }
 }
