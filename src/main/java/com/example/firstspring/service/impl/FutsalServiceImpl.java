@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -27,12 +28,16 @@ public class FutsalServiceImpl implements FutsalService {
     }
 
     @Override
+    public Optional<Ground> findById(Integer id) {
+        return Optional.empty();
+    }
+
+    @Override
     public void save(FutsalPojo futsalPojo) {
         Ground ground = new Ground();
         ground.setId(futsalPojo.getId());
         ground.setGround(futsalPojo.getGroundName());
         groundRepository.save(ground);
     }
-
 
 }
