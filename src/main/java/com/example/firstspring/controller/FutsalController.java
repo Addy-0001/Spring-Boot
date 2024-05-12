@@ -20,13 +20,13 @@ public class FutsalController {
     private final FutsalService futsalService;
 
     @GetMapping("/list")
-    public GlobalAPIResponse <List<Ground>> findAll(){
-        GlobalAPIResponse<List<Ground>> globalAPIResponse = new GlobalAPIResponse(<List<Ground>>);
-        globalAPIResponse.setStatus(200);
-        globalAPIResponse.setData(futsalService.findAll());
-        globalAPIResponse.saveData(FutsalPojo);
-        return globalAPIResponse;
-    }
+//    public GlobalAPIResponse <List<Ground>> findAll(){
+//        GlobalAPIResponse<List<Ground>> globalAPIResponse = new GlobalAPIResponse(<List<Ground>>);
+//        globalAPIResponse.setStatus(200);
+//        globalAPIResponse.setData(futsalService.findAll());
+//        globalAPIResponse.saveData(FutsalPojo);
+//        return globalAPIResponse;
+//    }
 
     @PostMapping("/create")
     public void save(@RequestBody FutsalPojo futsalPojo) {
